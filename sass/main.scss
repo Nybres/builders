@@ -351,6 +351,20 @@ body {
 	}
 }
 
+//check
+
+.check{
+	// padding: 2em 2em;
+	&__image{
+		position: relative;
+		padding: 10em 2em;
+		background-image: url("../img/second_hero-image.jpg");
+		background-position: center 10px;
+		background-size: cover;
+		overflow: hidden;
+	}
+}
+
 @media (min-width: 576px) {
 	.hero {
 		&__image-box {

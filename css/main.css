@@ -381,6 +381,15 @@ body {
   font-size: 1.8rem;
 }
 
+.check__image {
+  position: relative;
+  padding: 10em 2em;
+  background-image: url("../img/second_hero-image.jpg");
+  background-position: center 10px;
+  background-size: cover;
+  overflow: hidden;
+}
+
 @media (min-width: 576px) {
   .hero__image-box {
     position: absolute;
