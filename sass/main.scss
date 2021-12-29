@@ -1,0 +1,574 @@
+@import "./colors";
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.6rem;
+	color: $secondary;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.section-title {
+	color: $main;
+	text-transform: uppercase;
+	font-size: 2.4rem;
+	font-weight: bold;
+	margin: 0.5em 0em;
+}
+
+.main-btn {
+	padding: 1em 2em;
+	background-color: $darker-main;
+	border: none;
+	color: $white;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	margin: 1.2em 0;
+	align-self: flex-start;
+	cursor: pointer;
+}
+
+//navigation
+.nav {
+	position: relative;
+	background-color: $secondary;
+	padding: 0.9em;
+	height: 10vh;
+
+	&.nav-desktop {
+		display: none;
+	}
+
+	&__logo {
+		display: flex;
+		color: $white;
+		font-size: 3.8rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		height: 100%;
+		align-items: center;
+
+		span {
+			color: $main;
+		}
+	}
+
+	&__hamburger {
+		position: absolute;
+		top: 10%;
+		right: 8px;
+		padding: 0.8em;
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		z-index: 100;
+
+		&:focus {
+			outline: none;
+			border: 1px solid white;
+			border-radius: 8px;
+		}
+	}
+
+	&__bars-box {
+		position: relative;
+		width: 40px;
+		height: 25px;
+	}
+
+	&__bars {
+		background-color: $white;
+		width: 100%;
+		height: 3px;
+
+		&::after,
+		&::before {
+			position: absolute;
+			content: "";
+			background-color: $white;
+			right: 0;
+			width: 100%;
+			height: 3px;
+			transition: transform 0.4s;
+		}
+
+		&::after {
+			bottom: 11px;
+		}
+
+		&::before {
+			bottom: 0px;
+		}
+
+		&--active {
+			width: 0%;
+			&::after,
+			&::before {
+				right: 3px;
+			}
+
+			&::after {
+				bottom: 11px;
+				transform: rotate(-220deg);
+				width: 80%;
+			}
+
+			&::before {
+				bottom: 11px;
+				transform: rotate(220deg);
+				width: 80%;
+			}
+		}
+	}
+
+	&__navigation {
+		position: fixed;
+		display: flex;
+		left: 0;
+		right: 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: $secondary;
+		width: 100%;
+		height: 100vh;
+		transform: translateX(-110%);
+		transition: transform 0.4s linear;
+		z-index: 10;
+
+		&--active {
+			transform: translateX(0%);
+		}
+	}
+
+	&__item {
+		position: relative;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $white;
+		font-weight: bold;
+		font-size: 2.4rem;
+		padding: 0.5em;
+		margin: 0.5em;
+
+		&:hover {
+			color: $main;
+		}
+
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0;
+			bottom: 0;
+			border-bottom: 2px solid $main;
+			transition: 0.4s;
+		}
+
+		&::after {
+			left: 0;
+		}
+
+		&::before {
+			right: 0;
+		}
+
+		&:hover::after,
+		&:hover::before {
+			width: 50%;
+		}
+	}
+}
+
+//hero
+
+.hero {
+	&__image {
+		position: relative;
+		background-image: url("../img/hero-small.jpg");
+		height: 90vh;
+		background-position: center;
+		background-size: cover;
+		overflow: hidden;
+	}
+
+	&__image-box {
+		position: absolute;
+		display: block;
+		bottom: 0;
+		width: 80%;
+		left: 50%;
+		transform: translate(-50%, 0px);
+		background-color: rgba(0, 0, 0, 0.6);
+		border-top: 6px solid $main;
+		max-height: 60%;
+	}
+
+	&__box-text {
+		color: $white;
+		padding: 1em;
+	}
+
+	&__main-title {
+		font-size: 2.6rem;
+		margin-bottom: 0.6em;
+		text-transform: uppercase;
+	}
+
+	&__paragraph {
+		font-size: 1.6rem;
+		font-style: italic;
+		margin-bottom: 1em;
+	}
+
+	&__box-button {
+		padding: 0.6em 1.2em;
+		background: transparent;
+		color: $white;
+		text-transform: uppercase;
+		border: 1px solid $main;
+		font-size: 1.5rem;
+		transition: color 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $darker-main;
+		}
+	}
+}
+
+//about
+
+.about {
+	position: relative;
+	padding: 2em 1em;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__image {
+		width: 100%;
+		height: 400px;
+		background-image: url("../img/welcome-image.jpg");
+		background-position: center;
+		background-size: cover;
+		overflow: hidden;
+	}
+
+	&__paragraph {
+		font-size: 2rem;
+
+		&.one {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+//offert
+
+.offert {
+	padding: 2em 1em;
+	background-color: $grey;
+
+	&__cards-box {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin: 1em 0em;
+
+		&-image {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		&::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 0;
+			// z-index: 100;
+			transition: 0.6s;
+			height: 0%;
+		}
+
+		&:hover::after {
+			background-color: $main-rgba;
+			width: 100%;
+			height: 100%;
+		}
+
+		&-text {
+			background-color: $white;
+			padding: 1em;
+			text-align: center;
+			transition: background-color 0.6s, color 0.6s;
+		}
+
+		&:hover {
+			.offert__card-text {
+				background-color: $secondary;
+				z-index: 50;
+				color: $grey;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		font-style: italic;
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 576px) {
+	.hero {
+		&__image-box {
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			transform: translate(0%);
+			left: 10%;
+		}
+
+		&__box-text {
+			padding: 1em;
+		}
+
+		&__main-title {
+			font-size: 2.8rem;
+			margin-bottom: 0.6em;
+			text-transform: uppercase;
+		}
+
+		&__paragraph {
+			font-size: 1.8rem;
+			font-style: italic;
+			margin-bottom: 1em;
+		}
+
+		&__box-button {
+			padding: 0.8em 1.6em;
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.hero {
+		&__image {
+			background-image: url("../img/hero-large.jpg");
+			background-position: center -40px;
+		}
+
+		&__image-box {
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			transform: translate(0%);
+			left: 10%;
+		}
+
+		&__main-title {
+			font-size: 3rem;
+		}
+
+		&__paragraph {
+			font-size: 2.4rem;
+			font-style: italic;
+		}
+
+		&__box-button {
+			padding: 0.8em 1.6em;
+			font-size: 2rem;
+		}
+	}
+
+	.about {
+		padding: 2em 2em;
+
+		&__big-box {
+			.section-title {
+				font-size: 3rem;
+			}
+		}
+
+		&__paragraph {
+			font-size: 2.4rem;
+		}
+
+		.main-btn {
+			margin-top: 1.5em;
+			font-size: 1.6rem;
+		}
+	}
+
+	.offert {
+		padding: 2em 2em;
+		&__title {
+			font-size: 2.6rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.section-title {
+		font-size: 3rem;
+	}
+
+	.main-btn {
+		padding: 1em 2em;
+		font-size: 1.6rem;
+	}
+
+	.nav {
+		&.nav-mobile {
+			display: none;
+		}
+
+		&.nav-desktop {
+			display: block;
+		}
+
+		&__logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 3.6rem;
+		}
+
+		&__box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+
+		&__navigation {
+			position: relative;
+			background-color: $secondary;
+			transform: translateX(0%);
+			flex-direction: row;
+			height: 100%;
+		}
+
+		&__item {
+			font-size: 2.2rem;
+			padding: 0.5em;
+		}
+	}
+
+	.hero {
+		&__image-box {
+			position: absolute;
+			bottom: 0;
+			width: 30%;
+			transform: translate(0%);
+			left: 10%;
+		}
+	}
+
+	.about {
+		padding: 4em 2em;
+		&__image {
+			height: 500px;
+		}
+
+		&__box {
+			flex-direction: row;
+		}
+
+		&__big-box {
+			padding: 2em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__paragraph {
+			font-size: 2.2rem;
+		}
+	}
+
+	.offert {
+		&__cards-box {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			width: calc(50% - 1em);
+			margin-right: 1em;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.nav {
+		&__logo {
+			margin-left: 4em;
+		}
+	}
+
+	.hero {
+		&__box-text {
+			padding: 2em;
+		}
+
+		&__paragraph {
+			font-size: 2rem;
+		}
+
+		&__box-button {
+			padding: 0.8em 1.6em;
+			font-size: 2rem;
+		}
+	}
+
+	.offert {
+		&__cards-box {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			width: calc(33% - 1em);
+			margin-right: 1em;
+		}
+	}
+}
