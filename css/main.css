@@ -586,7 +586,7 @@ body {
         flex-wrap: wrap;
   }
   .offert__card {
-    width: calc(33% - 1em);
+    width: calc(33.33% - 1em);
     margin-right: 1em;
   }
 }
