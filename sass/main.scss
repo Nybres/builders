@@ -9,11 +9,13 @@
 }
 
 html {
+	height: 100%;
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
 
 body {
+	height: 100%;
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.6rem;
 	color: $secondary;
