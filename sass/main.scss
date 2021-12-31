@@ -9,7 +9,6 @@
 }
 
 html {
-	height: 100%;
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
@@ -355,9 +354,9 @@ body {
 
 //check
 
-.check{
+.check {
 	// padding: 2em 2em;
-	&__image{
+	&__image {
 		position: relative;
 		padding: 10em 2em;
 		background-image: url("../img/second_hero-image.jpg");
