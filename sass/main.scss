@@ -43,6 +43,13 @@ body {
 	margin: 1.2em 0;
 	align-self: flex-start;
 	cursor: pointer;
+	transition: color 0.3s, background-color 0.3s, font-weight 0.3s;
+
+	&:hover {
+		background-color: $secondary;
+		color: $grey;
+		font-weight: bold;
+	}
 }
 
 //navigation
