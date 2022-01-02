@@ -403,7 +403,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .check__box {
@@ -444,6 +444,37 @@ body {
 
 .check__box-button:hover {
   background-color: #ba2037;
+}
+
+.gallery .section-title {
+  text-align: center;
+  margin: 1em;
+}
+
+.gallery__paragraph {
+  text-align: center;
+}
+
+.gallery__image-box {
+  padding: 2em 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  gap: 0.5em;
+}
+
+.gallery__photo {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery__photo--1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
 }
 
 @media (min-width: 576px) {
@@ -523,9 +554,44 @@ body {
   .check__image {
     background-image: url("../img/second_hero_image_large.jpg");
   }
+  .check__box {
+    padding: 1em 4em;
+  }
+  .check__box-title {
+    font-size: 3rem;
+  }
+  .check__box-button {
+    font-size: 2rem;
+  }
+  .gallery .section-title {
+    font-size: 2.6rem;
+    margin: 1em;
+  }
+  .gallery__paragraph {
+    font-size: 2.2rem;
+    padding: 0em 2em;
+  }
+  .gallery__image-box {
+    padding: 2em 2em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 0.5em;
+  }
+  .gallery__photo {
+    height: 400px;
+  }
+  .gallery__photo--1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
 }
 
-@media (min-width: 768px) and (min-width: 992px) {
+@media (min-width: 992px) {
   .section-title {
     font-size: 3rem;
   }
@@ -632,9 +698,54 @@ body {
     width: calc(50% - 1em);
     margin-right: 1em;
   }
+  .offert__card-text {
+    padding: 3em 1em;
+  }
+  .check__image {
+    padding: 14em 0em;
+  }
+  .check__box {
+    padding: 1em 4em;
+  }
+  .gallery .section-title {
+    margin-top: 1.5em;
+    font-size: 2.8rem;
+  }
+  .gallery__image-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .gallery__photo {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .gallery__photo--1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
 }
 
-@media (min-width: 768px) and (min-width: 1400px) {
+@media (min-width: 1200px) {
+  .check__box {
+    padding: 1em 6em;
+  }
+  .check__box-title {
+    font-size: 3.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
   .nav__logo {
     margin-left: 4em;
   }
@@ -663,6 +774,25 @@ body {
   }
   .offert__card-text {
     padding: 2em 1em;
+  }
+  .check__box {
+    padding: 1em 8em;
+  }
+  .check__box-title {
+    font-size: 4.6rem;
+  }
+  .check__box-button {
+    font-size: 2.4rem;
+  }
+  .gallery .section-title {
+    margin-top: 1.5em;
+    font-size: 3rem;
+  }
+  .gallery__paragraph {
+    font-size: 2.4rem;
+  }
+  .gallery__image-box {
+    padding: 4em 0em;
   }
 }
 /*# sourceMappingURL=main.css.map */
