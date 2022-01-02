@@ -52,7 +52,7 @@
                     <p class="hero__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
                         voluptates
                         labore eaque aliquid! Facere itaque soluta earum ipsum eius debitis!</p>
-                    <button class="hero__box-button">join now</button>
+                    <a href="#contact"><button class="hero__box-button">join now</button></a>
                 </div>
             </div>
         </div>
@@ -113,29 +113,72 @@
             <div class="check__image">
                 <div class="check__box">
                     <h3 class="check__box-title">check out.work up a sweat for a few bucks a day.</h3>
-                    <button class="check__box-button">start now</button>
+                    <a href="#contact"><button class="check__box-button">start now</button></a>
                 </div>
                 <div class="check__image-shadow"></div>
             </div>
         </section>
 
-        <seciot class="gallery" id="gallery">
+        <section class="gallery" id="gallery">
             <div class="wrapper">
                 <h2 class="section-title">top class gym for anyone</h2>
                 <p class="gallery__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, dolore.
                     Sint, rerum?</p>
                 <div class="gallery__image-box">
-                    <img src="./img/gallery/1.jpg" alt="" class="gallery__photo gallery__photo--1">
-                    <img src="./img/gallery/2.jpg" alt="" class="gallery__photo gallery__photo--2">
-                    <img src="./img/gallery/3.jpg" alt="" class=" gallery__photo gallery__photo--3">
-                    <img src="./img/gallery/4.jpg" alt="" class="gallery__photo gallery__photo--4">
-                    <img src="./img/gallery/5.jpg" alt="" class="gallery__photo gallery__photo--5">
+                    <img src="./img/gallery/1.jpg" alt="kobieta odwrocona plecami na niemnym tle"
+                        class="gallery__photo gallery__photo--1">
+                    <img src="./img/gallery/2.jpg" alt="facet robiacy rozpietki na ławce skosnej"
+                        class="gallery__photo gallery__photo--2">
+                    <img src="./img/gallery/3.jpg" alt="dziewczyna wykonujaca brzuszki"
+                        class=" gallery__photo gallery__photo--3">
+                    <img src="./img/gallery/4.jpg" alt="kobieta robiaca siady ze sztanga na plecach"
+                        class="gallery__photo gallery__photo--4">
+                    <img src="./img/gallery/5.jpg" alt="facet oraz kobieta wykonujacy razem cwiczenia"
+                        class="gallery__photo gallery__photo--5">
                 </div>
             </div>
-        </seciot>
+        </section>
 
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <h2 class="section-title">get any questions?</h2>
+                <div class="contact__box">
+                    <div class="contact__box-form">
+                        <form class="contact__form">
+                            <div class="contact__form-box">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name">
+                            </div>
+                            <div class="contact__form-box">
+                                <label for="surname">Surname:</label>
+                                <input type="text" id="surname">
+                            </div>
+                            <div class="contact__form-box">
+                                <label for="msg">Message:</label>
+                                <textarea id="msg" cols="30" rows="10"></textarea>
+                            </div>
+                        </form>
+                        <button class="main-btn">submit</button>
+                    </div>
+                    <img class="contact__box-image" src="./img/welcome-image.jpg" alt="ciemny hantel na podłodze">
+                </div>
+            </div>
+        </section>
     </main>
-
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__box">
+                <div class="footer__box-text">
+                    <p>Made by BUILDERS &copy;</p>
+                </div>
+                <div class="footer__box-icons">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
 
